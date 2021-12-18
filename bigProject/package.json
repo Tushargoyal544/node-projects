@@ -1,0 +1,33 @@
+{
+  "name": "bigproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tushat goyal",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.27.1",
+    "cron": "^1.8.2",
+    "express": "^4.17.1",
+    "geonear": "^1.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.13",
+    "mongoose-aggregate-paginate-v2": "^1.0.5",
+    "mongoose-paginate": "^5.0.3",
+    "multer": "^1.4.3",
+    "nodemailer": "^2.7.2",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^2.0.15",
+    "qrcode": "^1.5.0",
+    "razorpay": "^2.8.0",
+    "socket.io": "^4.4.0",
+    "speakeasy": "^2.0.0",
+    "stripe": "^8.193.0",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  }
+}

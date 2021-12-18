@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <columns>
+    <email index="3">email</email>
+    <firstName index="1">firstName</firstName>
+    <lastName index="2">lastName</lastName>
+    <password index="5">password</password>
+    <phoneNumber index="4">phoneNumber</phoneNumber>
+  </columns>
+  <records>
+    <record index="1">
+      <email>g@gmail.com</email>
+      <firstName>as</firstName>
+      <lastName>as</lastName>
+      <password>123</password>
+      <phoneNumber>123</phoneNumber>
+    </record>
+    <record index="2">
+      <email>t@gmail.com</email>
+      <firstName>tu</firstName>
+      <lastName>tu</lastName>
+      <password>123</password>
+      <phoneNumber>123</phoneNumber>
+    </record>
+  </records>
+</data>

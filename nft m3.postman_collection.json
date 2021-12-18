@@ -1,0 +1,585 @@
+{
+	"info": {
+		"_postman_id": "5625376f-ff86-4e6f-bb33-8863cb3674a2",
+		"name": "nft m3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"gopal\",\n    \"lastName\": \"sharma\",\n    \"phoneNumber\": \"7834923031\",\n    \"email\": \"gopa0@gmail.com\",\n    \"countryCode\": \"+91\",\n    \"password\": \"123\",\n    \"address\": \"delhi\",\n    \"dateOfBirth\": \"05-07-2001\",\n    \"location\":{\n        \"coordinate\":[28.521412180643285, 77.30659380250434]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/SignUp",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"SignUp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productAdd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"abc\",\n    \"productDes\":\"abc\",\n    \"productPrice\":\"200\"\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/productAdd",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"productAdd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"email\":\"gopa0@gmail.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/loginJwt",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"loginJwt"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/viewProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"viewProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listNft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/user/listNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"listNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellNft",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThiNjllN2NiNDYwMDI4NjBkZTgwNzMiLCJpYXQiOjE2MzY2MTAzOTYsImV4cCI6MTYzNzY5MDM5Nn0.G4PDgNJqIC27oD9BJGEZgadwcpEszRHUW_Pb-zlOLaM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"abc\",\n    \"sellQnt\":2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/nftSell",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"nftSell"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewSellNft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/viewSellNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"viewSellNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listSellNft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8000/user/listSellNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"listSellNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyNft",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThkZjFlNDYyODViNThhZmQ5OTUxN2YiLCJpYXQiOjE2MzY2OTM0NDQsImV4cCI6MTYzNzc3MzQ0NH0.HNEu-JEw_yc6T2dwkqPKOKgOGp8-k8ue_j1Esd7UBTk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"abc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/buyNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"buyNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listOderNft",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThkZjFlNDYyODViNThhZmQ5OTUxN2YiLCJpYXQiOjE2MzY2OTM0NDQsImV4cCI6MTYzNzc3MzQ0NH0.HNEu-JEw_yc6T2dwkqPKOKgOGp8-k8ue_j1Esd7UBTk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/listOderNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"listOderNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThlMTRjNjUzMTdlNWY2NTVkMjczZGYiLCJpYXQiOjE2MzY3MDE0MjksImV4cCI6MTYzNzc4MTQyOX0.9M8H14jUYjD0zfkdKL6NrhO9ZG2NxWkFcsgHaDgf1bk",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"ownerId\":\"618e14c65317e5f655d273df\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/transHistory",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"transHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThlMTRjNjUzMTdlNWY2NTVkMjczZGYiLCJpYXQiOjE2MzY3ODE3ODgsImV4cCI6MTYzNzg2MTc4OH0.mnA_hmf2uLFMqiZk1ue1RnvR2y9U3O95BbwSVHNBvmU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productPrice\":\"200\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/viewHistory",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"viewHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listHistory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThlMTRjNjUzMTdlNWY2NTVkMjczZGYiLCJpYXQiOjE2MzY3ODE3ODgsImV4cCI6MTYzNzg2MTc4OH0.mnA_hmf2uLFMqiZk1ue1RnvR2y9U3O95BbwSVHNBvmU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/user/listHistory",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"listHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "secourity2fa",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MThlMTRjNjUzMTdlNWY2NTVkMjczZGYiLCJpYXQiOjE2MzY3ODE3ODgsImV4cCI6MTYzNzg2MTc4OH0.mnA_hmf2uLFMqiZk1ue1RnvR2y9U3O95BbwSVHNBvmU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"speakeasy\":true,\n    \"userToken\":751674\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/user/secourity2fa",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"secourity2fa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"no-tushar@mobiloitte.com\",\n    \"password\":\"123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/admin/adminLogIn",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"adminLogIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewNft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/admin/viewNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"viewNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listNft",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/admin/listNft",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"listNft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "viewOder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/admin/viewOder",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"viewOder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"productName\":\"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/admin/listoder",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"admin",
+						"listoder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
